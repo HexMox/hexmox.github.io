@@ -21,11 +21,29 @@
       padding: 23px;
       text-align: center;
     }
+
+    .mask {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: rgba(0,0,0,.6);
+    }
+
+    #btn {
+      position: fixed;
+      left: 0;
+      z-index: 3;
+    }
     </style>
   </head>
   <body>
+    <div class="mask"></div>
     <div class="container">
-      <img src="https://9.url.cn/edu/mcates/schoolSeason/modules/courseCard/img/qrcode.ccbe2af.jpg" alt="腾讯课堂微信服务号">
+      <div class="bd">
+        <img src="https://9.url.cn/edu/mcates/schoolSeason/modules/courseCard/img/qrcode.ccbe2af.jpg" alt="腾讯课堂微信服务号">
+      </div>
     </div>
 
     <button id="btn">Click me!</button>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html style="font-size: 15.525px;">
+  <head>
+    <title>img tag tap and hold test</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+    .container {
+      width: 320px;
+      height: 335px;
+      position: fixed;
+      margin: auto;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a81bc;
+      padding: 23px;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://9.url.cn/edu/mcates/schoolSeason/modules/courseCard/img/qrcode.ccbe2af.jpg" alt="腾讯课堂微信服务号">
+    </div>
+
+    <button id="btn">Click me!</button>
+
+    <script>
+    var html = '<div class="container"><img src="https://9.url.cn/edu/mcates/schoolSeason/modules/courseCard/img/qrcode.ccbe2af.jpg" alt="腾讯课堂微信服务号">更换过的</div>';
+
+    $('#btn').click(function() {
+      $('.container').remove();
+      $('body').append(html);
+    });
+    </script>
+  </body>
+</html>

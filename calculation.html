@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>计算器</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    h3 {
+      flex: 100% 1;
+      width: 100%;
+    }
+
+    #txt {
+      flex: 100% 1;
+      max-width: 360px;
+      margin-bottom: 20px;
+      line-height: 50px;
+    }
+
+    .btn {
+      width: 100px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Created by 陈双喜 &copy;2022</h3>
+  <input id="txt" type="text" disabled>
+
+  <button class="btn">1</button>
+  <button class="btn">2</button>
+  <button class="btn">3</button>
+
+  <button class="btn">4</button>
+  <button class="btn">5</button>
+  <button class="btn">6</button>
+
+  <button class="btn">7</button>
+  <button class="btn">8</button>
+  <button class="btn">9</button>
+
+  <button class="btn">+</button>
+  <button class="btn">-</button>
+  <button class="btn">=</button>
+
+  <button class="btn">=</button>
+  <button class="btn">=</button>
+  <button class="btn">=</button>
+
+
+
+
+
+  <script>
+    var input = document.getElementById('txt');
+    var btns = document.querySelectorAll('.btn');
+
+    var getResult = function(s) {
+      return eval(s);
+    }
+
+    var handler = function(e) {
+      // btnTxt为点击按钮的内容
+      var btnTxt = e.target.innerText;
+      // 当前屏幕显示的内容
+      var val = input.value;
+
+      // 如果btnTxt是等号，则计算结果
+      if (btnTxt == '=') {
+        input.value = getResult(val)
+      } else {
+        input.value = val + btnTxt
+      }
+      // 如果btnTxt是其他则对应屏幕显示
+      // 加上乘法* 除法/
+    }
+
+    document.body.addEventListener('click', handler);
+  </script>
+</body>
+
+</html>

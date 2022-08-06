@@ -51,12 +51,11 @@
 
   <button class="btn">+</button>
   <button class="btn">-</button>
-  <button class="btn">=</button>
+  <button class="btn">*</button>
 
+  <button class="btn">/</button>
   <button class="btn">=</button>
-  <button class="btn">=</button>
-  <button class="btn">=</button>
-
+  <button class="btn">←</button>
 
 
 
@@ -78,6 +77,8 @@
       // 如果btnTxt是等号，则计算结果
       if (btnTxt == '=') {
         input.value = getResult(val)
+      } else if (btnTxt == '←') {
+        input.value = val.substring(0, val.length - 1);
       } else {
         input.value = val + btnTxt
       }
